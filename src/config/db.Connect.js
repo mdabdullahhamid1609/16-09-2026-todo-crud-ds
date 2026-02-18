@@ -10,4 +10,4 @@ export async function dbConnect() {
         console.log("mongo db not connected", error)
     }
     
-}
+} 
