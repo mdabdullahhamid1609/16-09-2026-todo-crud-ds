@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
-const url = "mongodb+srv://abdullahhamid1609_db_user:Hamid123@cluster16-02.gb0kz6e.mongodb.net/?appName=Cluster16-02"
 
 export async function dbConnect() {
     try {
-        await mongoose.connect(url)
+        await mongoose.connect(process.env.MONGO_URL)
         console.log("mongodb connected")
         
     } catch (error) {
